@@ -1,6 +1,6 @@
-# GraphQL Starter Repo
+# REST Starter Repo
 
-Steppingblocks starter repo for GraphQL API coding challenge.
+Steppingblocks starter repo for REST API coding challenge.
 
 ### Setup Checklist
 
@@ -12,14 +12,14 @@ Steppingblocks starter repo for GraphQL API coding challenge.
       Rename `.sample.env` to `.env` in the root directory of your project and we'll give you the database password to fill in
 - [ ] **Run the dev script**
       `npm run dev`
-- [ ] **GraphQL Playground**
+- [ ] **Checking your work**
       Use an API testing tool such as Postman or `curl` to test your work
 
 ### Starter Code
 
 The application's entry point is in the `src/index.ts` file. You can look here to find your way around. You'll see a basic express server.
 
-We've got a couple of basic Queries and Mutations on the `Users` table to get you started.
+We've got a couple of endpoints to do some basic CRUD actions on the `Users` table to get you started.
 
 ### Database
 
