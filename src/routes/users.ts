@@ -6,7 +6,7 @@ const users = express.Router();
 const queries = {
   ALL_USERS: `SELECT id, created_at, first_name, last_name, username FROM "Users"`,
   ONE_USER: `SELECT id, created_at, first_name, last_name, username FROM "Users" WHERE username=$1`,
-  INSERT_USER: `INSERT INTO "Users" (first_name, last_name, username) VALUES ($1, $2, $3) returning id, first_name, last_name, created_at`,
+  INSERT_USER: `INSERT INTO "Users" (first_name, last_name, username) VALUES ($1, $2, $3) returning id, first_name, last_name, username, created_at`,
 };
 
 const ERR = { error: "something went wrong" };
