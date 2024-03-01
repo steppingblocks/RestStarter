@@ -1,23 +1,23 @@
 # REST Starter Repo
 
-Steppingblocks starter repo for REST API coding challenge.
+Steppingblocks starter repo for REST API coding challenge in golang.
 
 ### Setup Checklist
 
-- [ ] **Node.js Version**
-      This project was created with Node v20.2.0. If you use nvm, you can just run `nvm use`, and install this version if you don't have it installed
+- [ ] **Golang verison**
+      This project was created with Go 1.22. 
 - [ ] **Install Dependencies**
-      `npm install`
+      `go mod download`
 - [ ] **Environment Variables**
-      Rename `.sample.env` to `.env` in the root directory of your project and we'll give you the database password to fill in
+      Rename `.sample.env` to `.env` in the root directory of your project, and we'll give you the database password to fill in
 - [ ] **Run the dev script**
-      `npm run dev`
+      `go run main.go`. This will require a rerun every code change as base go is not set up to do live refresh.
 - [ ] **Checking your work**
       Use an API testing tool such as Postman or `curl` to test your work
 
 ### Starter Code
 
-The application's entry point is in the `src/index.ts` file. You can look here to find your way around. You'll see a basic express server.
+The application's entry point is in the `main.go` file. You can look here to find your way around. You'll see a basic gin server.
 
 We've got a couple of endpoints to do some basic CRUD actions on the `Users` table to get you started.
 
@@ -45,10 +45,8 @@ The `Users` have a one-to-many relationship with `Posts`.
 
 ### Assignment
 
-Complete the code in `/src/routes/posts.ts` the `/posts` endpoint with a GET request to /posts/:username to retrieve a user's posts in reverse-chronological order and a POST request to /posts/:username to create a post for a given user. You do not need to worry about authorization.
+Complete the code in `/pkg/posts/controller.go` the `/posts` endpoint with a GET request to /posts/:username to retrieve a user's posts in reverse-chronological order and a POST request to /posts/:username to create a post for a given user. You do not need to worry about authorization.
 
-Feel free to look at `/src/routes/users.ts` if you need some example express code.
+Feel free to look at `/pkg/users/controller.go` if you need some example gin and sqlx code.
 
 Bonus: add pagination to the GET request or describe how you would accomplish this
-
-NOTE: `allowJS` is turned on, feel free to rename `posts.ts` to `posts.js` and work in pure JS if you are more comfortable that way.
